@@ -1,26 +1,14 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { CreateDtoQuiz } from './dto/create-quiz.dto';
 
 @Injectable()
 export class QuizService {
-  private quiz = [
-    { id: 1, name: 'Shuffleboard' },
-    { id: 2, name: 'Archery' },
-  ];
-
-  findAll(/*name?: 'Shuffleboard' | 'Archery'*/) {
-    // if (name) {
-    //   return this.quiz.filter((quiz) => quiz.name === name);
-    // }
-    return this.quiz;
+  findAll() {
+    return [1];
   }
 
   findOne(id: number) {
-    const findQuiz = this.quiz.find((quiz) => quiz.id === id);
-    if (!findQuiz) {
-      throw new NotFoundException('Not Found');
-    }
-    return findQuiz;
+    return { id };
   }
 
   createQuiz(createDtoQuiz: CreateDtoQuiz) {
