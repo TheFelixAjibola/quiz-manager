@@ -16,4 +16,10 @@ export class Quiz extends BaseEntity {
     type: 'text',
   })
   description: string;
+
+  @Column({
+    type: 'boolean',
+    default: 1,
+  })
+  isActive: boolean;
 }
