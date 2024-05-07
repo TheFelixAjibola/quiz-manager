@@ -9,7 +9,7 @@ import {
   ValidationPipe,
 } from '@nestjs/common';
 import { QuizService } from '../services/quiz.service';
-import { CreateQuizDto } from '../dto/create-quiz.dto';
+import { CreateQuizDto } from '../dtos/create-quiz.dto';
 import { Quiz } from '../entities/quiz.entity';
 
 @Controller('quiz')
