@@ -1,7 +1,7 @@
 import { HttpStatus, ValidationPipe } from '@nestjs/common';
 
 const PASSWORD_RULE =
-  /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/;
+  /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-_+=]).{8,}$/;
 
 const PASSWORD_RULE_MESSAGE =
   'Password should have at least 1 uppercase, 1 lowercase, a number and special character';
