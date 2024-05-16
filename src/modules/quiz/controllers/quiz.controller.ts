@@ -15,6 +15,7 @@ import { CreateQuizDto } from '../dtos/create-quiz.dto';
 import { Quiz } from '../entities/quiz.entity';
 import { ApiCreatedResponse, ApiOkResponse, ApiTags } from '@nestjs/swagger';
 import { IPaginationOptions, Pagination } from 'nestjs-typeorm-paginate';
+import { ApiPaginatedResponse } from 'src/common/decorator/api-pagination.response';
 
 @ApiTags('Quiz')
 @Controller('quiz')
@@ -22,7 +23,7 @@ export class QuizController {
   constructor(private readonly quizService: QuizService) {}
 
   @Get('/')
-  // @ApiPaginatedResponse({ model: Quiz, description: 'List of Quizes' })
+  @ApiPaginatedResponse({ model: Quiz, description: 'List of Quizes' })
   async getAllQuiz(
     @Query('page', new DefaultValuePipe(1), ParseIntPipe) page: number = 1,
     @Query('limit', new DefaultValuePipe(2), ParseIntPipe) limit: number = 2,
