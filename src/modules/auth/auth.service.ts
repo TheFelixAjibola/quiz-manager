@@ -15,7 +15,7 @@ export class AuthService {
   ) {}
 
   async validateUserCredentials(email: string, password: string): Promise<any> {
-    const user = await this.userService.getUserByEmail(email);
+    const user = await this.userService.findByEmail(email);
 
     if (!user) throw new BadRequestException();
 
@@ -26,7 +26,7 @@ export class AuthService {
     return user;
   }
 
-  async generateToken(user: any) {
+  generateToken(user: any) {
     return {
       access_token: this.jwtService.sign({
         name: user.name,

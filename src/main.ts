@@ -6,6 +6,7 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.enableCors();
   const config = new DocumentBuilder()
+    .addBearerAuth()
     .setTitle('Quiz Manager API')
     .setDescription('The Quiz Manager API description')
     .setVersion('1.0')

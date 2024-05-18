@@ -2,6 +2,7 @@ import { Seeder, SeederFactoryManager } from 'typeorm-extension';
 import { DataSource } from 'typeorm';
 import { User } from 'src/modules/user/entities/user.entity';
 import * as bcrypt from 'bcrypt';
+import { UserRoles } from 'src/modules/user/enums/user.enum';
 
 export default class UserSeeder implements Seeder {
   public async run(
@@ -17,6 +18,7 @@ export default class UserSeeder implements Seeder {
       name: 'Felix Ajibola',
       email: 'thefelixajibola@gmail.com',
       password: hashedPassword,
+      role: UserRoles.ADMIN,
     });
 
     const userFactory = factoryManager.get(User);

@@ -1,4 +1,4 @@
-import { Body, Controller, Post } from '@nestjs/common';
+import { Body, Controller, Get, Post } from '@nestjs/common';
 import { UserService } from '../services/user.service';
 import { CreateUserDto } from '../dtos/create-user.dto';
 import { SETTINGS } from 'src/app.utils';
@@ -13,6 +13,11 @@ import {
 @Controller('user')
 export class UserController {
   constructor(private readonly userService: UserService) {}
+
+  @Get()
+  async getUsers() {
+    return await this.userService.findAll();
+  }
 
   @ApiCreatedResponse({
     description: 'Created user object as response',

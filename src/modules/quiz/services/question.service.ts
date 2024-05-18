@@ -9,7 +9,7 @@ import { Quiz } from '../entities/quiz.entity';
 export class QuestionService {
   constructor(
     @InjectRepository(Question)
-    private questionRepository: Repository<Question>,
+    private readonly questionRepository: Repository<Question>,
   ) {}
 
   async findQuestionById(id: number): Promise<Question> {
