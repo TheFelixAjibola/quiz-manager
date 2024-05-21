@@ -1,0 +1,35 @@
+[Nest] 4124  - 05/21/2024, 12:46:27 AM     LOG [NestFactory] Starting Nest application...
+[Nest] 4124  - 05/21/2024, 12:46:27 AM     LOG [InstanceLoader] TypeOrmModule dependencies initialized +35ms
+[Nest] 4124  - 05/21/2024, 12:46:27 AM     LOG [InstanceLoader] PassportModule dependencies initialized +0ms
+[Nest] 4124  - 05/21/2024, 12:46:27 AM     LOG [InstanceLoader] ConfigHostModule dependencies initialized +1ms
+[Nest] 4124  - 05/21/2024, 12:46:27 AM     LOG [InstanceLoader] JwtModule dependencies initialized +0ms
+[Nest] 4124  - 05/21/2024, 12:46:27 AM     LOG [InstanceLoader] AppModule dependencies initialized +0ms
+[Nest] 4124  - 05/21/2024, 12:46:27 AM     LOG [InstanceLoader] DiscoveryModule dependencies initialized +0ms
+[Nest] 4124  - 05/21/2024, 12:46:27 AM     LOG [InstanceLoader] ConfigModule dependencies initialized +0ms
+[Nest] 4124  - 05/21/2024, 12:46:27 AM     LOG [InstanceLoader] EventEmitterModule dependencies initialized +1ms
+query: SELECT VERSION() AS `version`
+[Nest] 4124  - 05/21/2024, 12:46:27 AM     LOG [InstanceLoader] TypeOrmCoreModule dependencies initialized +70ms
+[Nest] 4124  - 05/21/2024, 12:46:27 AM     LOG [InstanceLoader] TypeOrmModule dependencies initialized +0ms
+[Nest] 4124  - 05/21/2024, 12:46:27 AM     LOG [InstanceLoader] TypeOrmModule dependencies initialized +0ms
+[Nest] 4124  - 05/21/2024, 12:46:27 AM     LOG [InstanceLoader] UserModule dependencies initialized +2ms
+[Nest] 4124  - 05/21/2024, 12:46:27 AM     LOG [InstanceLoader] QuizModule dependencies initialized +2ms
+[Nest] 4124  - 05/21/2024, 12:46:27 AM     LOG [InstanceLoader] AuthModule dependencies initialized +0ms
+[Nest] 4124  - 05/21/2024, 12:46:27 AM     LOG [RoutesResolver] AppController {/}: +31ms
+[Nest] 4124  - 05/21/2024, 12:46:27 AM     LOG [RouterExplorer] Mapped {/, GET} route +3ms
+[Nest] 4124  - 05/21/2024, 12:46:27 AM     LOG [RoutesResolver] QuizController {/quiz}: +0ms
+[Nest] 4124  - 05/21/2024, 12:46:27 AM     LOG [RouterExplorer] Mapped {/quiz, GET} route +1ms
+[Nest] 4124  - 05/21/2024, 12:46:27 AM     LOG [RouterExplorer] Mapped {/quiz/:id, GET} route +1ms
+[Nest] 4124  - 05/21/2024, 12:46:27 AM     LOG [RouterExplorer] Mapped {/quiz/create, POST} route +0ms
+[Nest] 4124  - 05/21/2024, 12:46:27 AM     LOG [RoutesResolver] QuestionController {/question}: +1ms
+[Nest] 4124  - 05/21/2024, 12:46:27 AM     LOG [RouterExplorer] Mapped {/question, POST} route +0ms
+[Nest] 4124  - 05/21/2024, 12:46:27 AM     LOG [RoutesResolver] OptionController {/question/option}: +0ms
+[Nest] 4124  - 05/21/2024, 12:46:27 AM     LOG [RouterExplorer] Mapped {/question/option, POST} route +0ms
+[Nest] 4124  - 05/21/2024, 12:46:27 AM     LOG [RoutesResolver] ResponseController {/response}: +0ms
+[Nest] 4124  - 05/21/2024, 12:46:27 AM     LOG [RouterExplorer] Mapped {/response, POST} route +1ms
+[Nest] 4124  - 05/21/2024, 12:46:27 AM     LOG [RoutesResolver] UserController {/user}: +0ms
+[Nest] 4124  - 05/21/2024, 12:46:27 AM     LOG [RouterExplorer] Mapped {/user, GET} route +0ms
+[Nest] 4124  - 05/21/2024, 12:46:27 AM     LOG [RouterExplorer] Mapped {/user/register, POST} route +1ms
+[Nest] 4124  - 05/21/2024, 12:46:27 AM     LOG [RoutesResolver] AuthController {/auth}: +0ms
+[Nest] 4124  - 05/21/2024, 12:46:27 AM     LOG [RouterExplorer] Mapped {/auth/login, POST} route +0ms
+[Nest] 4124  - 05/21/2024, 12:46:27 AM     LOG [RouterExplorer] Mapped {/auth/user, GET} route +0ms
+[Nest] 4124  - 05/21/2024, 12:46:27 AM     LOG [NestApplication] Nest application successfully started +12ms
