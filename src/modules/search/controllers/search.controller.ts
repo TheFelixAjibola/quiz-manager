@@ -2,6 +2,7 @@ import { Body, Controller, Get, Post } from '@nestjs/common';
 import { SearchService } from '../search.service';
 import { ApiTags } from '@nestjs/swagger';
 import { SearchMovieDto } from '../dto/search-movie.dto';
+import { quizSampleData } from 'src/db/data/quiz.data';
 
 @ApiTags('Search')
 @Controller('search')
@@ -10,21 +11,23 @@ export class SearchController {
   constructor(private readonly searchService: SearchService) {}
 
   @Get('/')
-  public async getSearch(): Promise<void> {
-    await this.searchService.addDocuments([
-      { id: 1, title: 'Carol', genres: ['Romance', 'Drama'] },
-      { id: 2, title: 'Wonder Woman', genres: ['Action', 'Adventure'] },
-      { id: 3, title: 'Life of Pie', genres: ['Adventure', 'Drama'] },
-      {
-        id: 4,
-        title: 'Mad Max: Fury Road',
-        genres: ['Adventure', 'Science Fiction'],
-      },
-      { id: 5, title: 'Moana', genres: ['Fantasy', 'Action'] },
-      { id: 6, title: 'Philadelphia', genres: ['Drama'] },
-      { id: 7, title: 'Introducing The Kujus', genres: ['Drama'] },
-      { id: 8, title: 'The Kujus Again', genres: ['Drama'] },
-    ]);
+  public async getSearch() {
+    const documents = [];
+
+    for (let i = 0; i < quizSampleData.length; i++) {
+      const { questions } = quizSampleData[i];
+
+      for (let j = 0; j < questions.length; j++) {
+        const { question } = questions[j];
+
+        documents.push({
+          id: `${i}${j}`,
+          text: question,
+        });
+      }
+    }
+
+    return await this.searchService.addDocuments(documents);
   }
 
   @Post('/')

@@ -25,7 +25,7 @@ export const quizSampleData: Array<ISampleData> = [
         ],
       },
       {
-        question: 'What is the role of Service provider?',
+        question: 'What is the role of Service provider in NestJS?',
         options: [
           {
             text: 'They allow Laravel to know about the packages which are present and how to bootstrap them',
