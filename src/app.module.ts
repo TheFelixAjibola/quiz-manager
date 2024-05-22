@@ -15,6 +15,7 @@ import { dataSourceOptions } from './db/data-source';
 import { ApiTokenCheckMiddleware } from './common/middleware/api-token-check.middleware';
 import { EventEmitterModule } from '@nestjs/event-emitter';
 import { MulterModule } from '@nestjs/platform-express';
+import { SearchModule } from './modules/search/search.module';
 
 @Module({
   imports: [
@@ -25,6 +26,7 @@ import { MulterModule } from '@nestjs/platform-express';
     QuizModule,
     UserModule,
     AuthModule,
+    SearchModule,
   ],
   controllers: [AppController],
   providers: [AppService],
